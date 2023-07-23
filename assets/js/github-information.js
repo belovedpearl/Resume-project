@@ -39,6 +39,8 @@ function userInformationHTML(user) {
 }
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");  // empties the input value when nothing is typed
+    $("#gh-repo-data").html("");  // "          "
 
     var username = $("#gh-username").val();
     if (!username) {
@@ -73,4 +75,4 @@ function fetchGitHubInformation(event) {
         });
 }
 
-
+$(document).ready(fetchGitHubInformation);  // Starts the function once the page loads
