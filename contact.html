@@ -16,7 +16,7 @@
     <script type="text/javascript">
         (function(){
         emailjs.init("9wHth3kX1UmXzVcIy");
-        emailjs.send("service_v2zk4yh","template_8wjhfc6");
+        // emailjs.send("service_v2zk4yh","template_8wjhfc6");
         })();
         // emailjs.send("service_v2zk4yh","template_8wjhfc6");
     </script>
@@ -60,9 +60,9 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
-                        <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required />
+                        <input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="Email" required />
                         <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Project description" required></textarea>
                         <div class="form-row text-center">
                             <div class="col">
@@ -135,9 +135,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
-
-        
+        </div>   
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 </html>
